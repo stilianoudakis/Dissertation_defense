@@ -1,0 +1,113 @@
+---
+title: "Methods for developing a machine learning framework for precise 3D domain boundary prediction at base-level resolution"
+author: "Jennifer L Thompson, MPH<br><span style = 'font-size: 50%;'>Vanderbilt University Medical Center<br>Department of Biostatistics + Center for Critical Illness, Brain Dysfunction & Survivorship</span>"
+date: 'R/Medicine 2018 ![](img/vcu_logo.png){width=50px}<br>`r icon::fontawesome("link", style = "solid")` [bit.ly/jlt-rmed2018](https://bit.ly/jlt-rmed2018)<br>`r icon::fontawesome$brands$github` [jent103](https://twitter.com/jent103)'
+output: 
+  xaringan::moon_reader:
+    css: [default]
+    lib_dir: libs
+    nature:
+      titleSlideClass: ["center", "middle", "inverse"]
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+library(tidyverse) # load tidyverse package
+library(babynames) # load babynames package
+#library(leaflet) # uncomment to use if you install
+```
+
+# Introduce yourself!
+
+> My name is Alison and I am a Data Scientist & Professional Educator at RStudio. I live in Portland, Oregon with my husband, daughter, and our sourdough starter.
+
+---
+
+# Find me at...
+
+All the details...
+
+---
+
+class: center, middle
+
+# Slide with centered content in the middle
+
+My name is Alison. I like hot toddies, `#rdogladies`,...
+
+.left[and babies.]
+
+---
+
+class: center, middle 
+
+# Hi there, with an image
+
+My name is Alison. I like hot toddies, 
+`#rdogladies`, and
+
+<img src="http://bit.ly/wiki-toddy" width="15%" align="center" />
+
+---
+
+# Hi there
+
+My name is Alison
+
+--
+
+I like hot toddies
+
+--
+
+`#rdogladies`
+
+--
+
+and babies
+
+---
+
+# two column pic slide
+
+.pull-left[![](http://bit.ly/wiki-toddy)]
+
+.pull-right[![](http://bit.ly/momtocat)]
+
+---
+
+# other way to show image
+
+.pull-left[<img src="http://bit.ly/wiki-toddy" width="15%" />]
+
+---
+
+# highlighting code
+
+```{r}
+library(babynames)
+library(tidyverse)
+tx_names <- babynames %>%
+  filter(name == "Dallas" | 
+         name == "Austin") %>%
+  filter(sex == "F") 
+glimpse(tx_names) #<<
+```
+
+---
+
+class: center, inverse
+background-image: url("img/goat_yoga.jpg")
+background-size: cover
+background-position: center
+background-color: #cccccc
+
+# A new slide
+
+Content.
+
