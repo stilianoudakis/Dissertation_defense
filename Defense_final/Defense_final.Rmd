@@ -711,7 +711,7 @@ knitr::include_graphics("img/parameters.png")
 
 1. Why random forest?
 
-   + <font color="red">Invariant toward overfitting, doesn't pick out one from group of collinear predictors, interpretable measure of variable importance, flexible hyperparameters</font>
+   + <font color="red">Invariant toward overfitting, doesn't pick out one from group of collinear predictors, interpretable measure of variable importance, flexible hyperparameters.</font>
 
 2. Since random forest is an ensemble of decision trees (nonlinear), why normalize distances?
 
