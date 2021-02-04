@@ -727,7 +727,7 @@ knitr::include_graphics("img/parameters.png")
 
 1. Why not perform simulation study instead of relying on "ground truth" boundaries?
 
-   + <font color="red">While there are methods for simulating Hi-C contact matrices (and therefore, TADs) and methods for simulating ChIP-seq data, they are done through separate processes. Thus, building models using both components will only capture noise.</font>
+   + <font color="red">While there are methods for simulating Hi-C contact matrices (and therefore, TADs) and methods for simulating ChIP-seq data, they are done through separate processes. Thus, building models using both components will only capture noise</font>
    
 2. Is it biased to build models using annotations and then used the enrichment of same annotations to gauge performance?
 
