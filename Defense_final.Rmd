@@ -1,7 +1,7 @@
 ---
 title: <font color="febe10">Methods for developing a machine learning framework for precise 3D domain boundary prediction at base-level resolution</font>
 author: <font color="febe10">Dissertation Defense<br> Virginia Commonwealth University | Department of Biostatistics</font><br>![](img/vcu_mcv_logo.png){width=150px}
-date: <font color="febe10">Spiro C Stilianoudakis, MA</font><br>`r icon::fontawesome$brands$github` [stilianoudakis](https://github.com/stilianoudakis)<br><font color="febe10">February 8, 2021</font>
+date: <font color="febe10">Spiro C Stilianoudakis, MA</font><br>`r icon::fontawesome$brands$github` [stilianoudakis](https://stilianoudakis.github.io/Dissertation_defense/#1)<br><font color="febe10">February 8, 2021</font>
 output: 
   xaringan::moon_reader:
     css: [default, default-fonts]
