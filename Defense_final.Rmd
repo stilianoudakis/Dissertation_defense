@@ -28,7 +28,7 @@ library(babynames) # load babynames package
 
 1. <small>The 3D genome</small>
 
-   + <small>Topologically Associated Domains (TADs)</small>
+   + <small>Topologically Associating Domains (TADs)</small>
    + <small>Hi-C sequencing</small>
 
 --
