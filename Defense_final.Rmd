@@ -1,7 +1,7 @@
 ---
 title: <font color="febe10">Methods for developing a machine learning framework for precise 3D domain boundary prediction at base-level resolution</font>
 author: <font color="febe10">Dissertation Defense<br> Virginia Commonwealth University | Department of Biostatistics</font><br>![](img/vcu_mcv_logo.png){width=150px}
-date: <font color="febe10">Spiro C Stilianoudakis, MA</font><br>`r icon::fontawesome$brands$github` [stilianoudakis](https://stilianoudakis.github.io/Dissertation_defense/#1)<br><font color="febe10">February 8, 2021</font>
+date: <font color="febe10">Spiro C Stilianoudakis, MA</font><br>`r icon::fontawesome$brands$github` [stilianoudakis](https://github.com/stilianoudakis/Dissertation_defense)<br><font color="febe10">February 8, 2021</font>
 output: 
   xaringan::moon_reader:
     css: [default, default-fonts]
@@ -191,7 +191,7 @@ background-size: contain
 
    + How author explained why finding TAD segmentation from the contact map is tricky:
 
-     <small>"This is due to experimental factors such as noise and inadequate coverage. It is also because of the intrinsic difficulty of the problem: the decline in contact frequency at domain edges can be subtle, and the very rapid decline in contact probability observed as one moves away from the diagonal of a contact map is a major confound for most approaches."</small>
+     <small>`r icon::fontawesome$solid$"quote-left"`This is due to experimental factors such as noise and inadequate coverage. It is also because of the intrinsic difficulty of the problem: the decline in contact frequency at domain edges can be subtle, and the very rapid decline in contact probability observed as one moves away from the diagonal of a contact map is a major confound for most approaches.`r icon::fontawesome$solid$"quote-right"`</small>
      
 - Additional pitfall:
 
@@ -221,22 +221,23 @@ background-size: contain
 
 --
 
-- Unanswered questions:
+Unanswered questions:
 
 --
 
-   1. Can a unified framework allow us to more accurately determine the most informative genomic elements of TAD boundary formation? (Aim 1)
-      + Feature engineering
-      + Resolution 
-      + Class imbalance
-      
---
-
-   2. Can we leverage the predictive model to more precisely predict TAD boundaries at base-level resolution? (Aim2)
+1. Can a unified framework allow us to more accurately determine the most informative genomic elements of TAD boundary formation? (Aim 1)
+   
+   - Feature engineering
+   - Resolution 
+   - Class imbalance
 
 --
 
-   3. Can we extend these methods to predict boundaries on cell lines that do not have Hi-C data available? (Aim 3)
+2. Can we leverage the predictive model to more precisely predict TAD boundaries at base-level resolution? (Aim 2)
+
+--
+
+3. Can we extend these methods to predict boundaries on cell lines that do not have Hi-C data available? (Aim 3)
 
 ---
 
@@ -590,7 +591,7 @@ Thank you to my committee members:
 
 --
 
-My RA Advisors: Dr. Caroline Carrico & Dr. Shilpa Naavaal
+My RA Advisors: Dr. Caroline Carrico & Dr. Shillpa Naavaal
 
 --
 
