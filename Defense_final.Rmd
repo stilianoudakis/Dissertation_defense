@@ -39,7 +39,7 @@ library(babynames) # load babynames package
 
 --
 
-3. <small>Developing a machine learning framework for precise TAD boundary prediction at base-level resolution</small>
+3. <small>Bridging the gap between 3D HiC data and 1D ChIP-seq data for more precise domain boundary prediction</small>
    + <small>Aim 1: Develop a machine learning framework to establish an optimal TAD boundary region prediction model</small>
    + <small>Aim 2: Develop a density-based partitioning technique for precise boundary prediction at base-level resolution</small>
    + <small>Aim 3: Develop a technique for predicting boundaries on cell lines that do not have publicly available Hi-C data</small>
@@ -201,20 +201,17 @@ background-size: contain
 
 # Prediction-based methods
 
-1. Mourad et al. (PLOS: Computational Biology; 2016)
+Build classifiers on ground truth TAD boundaries to draw associations with genomic elements
 
-   + Built on Arrowhead-defined boundaries @ 10 kb
-   + Uses only TFBS
-   + Percentage of overlap as feature space
-   + Multiple logistic regression
+1. Mourad et al. (PLOS: Computational Biology; 2016)
 
 2. Hong et al. (Nucleic Acid Research; 2017)
 
-   + Built on Arrowhead-defined boundaries @ 50 kb
-   + Uses only TFBS
-   + Counts of overlap as feature space
-   + $l_{2}$ regularized logistic regression
- 
++ Built on Arrowhead-defined boundaries @ 10 kb/50 kb
++ Only used TFBS
++ Rudimentary feature engineering: percentage/count of overlap 
++ Regularized/unregularized multiple logistic regression 
+
 ---
 
 # Bridging the gap between 3D HiC data and 1D ChIP-seq data for more precise domain boundary prediction
@@ -317,7 +314,7 @@ $C = \{ CHR1,CHR2, \cdots \}$
 How it works...
 ]
 
-```{r, echo=FALSE, out.width = "400px", fig.align="center"}
+```{r, echo=FALSE, out.width = "400px", fig.align="left"}
 knitr::include_graphics("img/psuedocode.png")
 ```
 
@@ -535,11 +532,11 @@ background-size: 87%
 
 --
 
-- Models trained using Aim 1 are provided in [preciseTADhub](https://bioconductor.org/packages/devel/data/experiment/html/preciseTADhub.html) as an ExperimentHub R package
+- Models trained using Aim 1 are provided in [preciseTADhub](https://bioconductor.org/packages/devel/data/experiment/html/preciseTADhub.html) as an ExperimentHub R package accepted to Bioconductor
 
 --
 
-- Suite of tools discussed are provided in the [preciseTAD](https://bioconductor.org/packages/devel/data/experiment/html/preciseTAD.html) R package
+- Suite of tools discussed are provided in the [preciseTAD](https://bioconductor.org/packages/devel/data/experiment/html/preciseTAD.html) R package accepted to Bioconductor
 
 --
 
@@ -575,11 +572,13 @@ bioRxiv 2020.09.03.282186; doi: https://doi.org/10.1101/2020.09.03.282186
 
 --
 
-Thank you to my both of my advisors Dr. Mikhail Dozmorov & Dr. Le Kang
+Thank you to my advisor Dr. Mikhail Dozmorov 
 
 --
 
 Thank you to my committee members:
+
+- Dr. Le Kang
 
 - Dr. Roy Sabo
 
@@ -588,6 +587,10 @@ Thank you to my committee members:
 - Dr. Paul Brooks
 
 - Dr. Tim York
+
+--
+
+Members of the Graduate Selection/Acceptance Committee
 
 --
 
@@ -712,7 +715,7 @@ knitr::include_graphics("img/parameters.png")
 
 1. Why random forest?
 
-   + <font color="red">Invariant toward overfitting, doesn't pick out one from group of collinear predictors, interpretable measure of variable importance, flexible hyperparameters.</font>
+   + <font color="red">Invariant toward overfitting, doesn't pick out one from group of collinear predictors, interpretable measure of variable importance, flexible hyperparameters, required less computational time compared to more complicated algorithms (i.e. xgboost).</font>
 
 2. Since random forest is an ensemble of decision trees (nonlinear), why normalize distances?
 
@@ -737,3 +740,7 @@ knitr::include_graphics("img/parameters.png")
 3. How can you be sure that you are not predicting every boundary with a CTCF, RAD21, etc. overlap?
 
    + <font color="red">There are hundreds of thousands of ChIP-seq peak regions throughout the genome. That would result in hundreds of thousands of predicted boundaries. We see from figures like on Slide 29 that this is not the case. Concepts like the probability threshold (t) and normalized (NE) are used to guard against this.</font>
+   
+4. Why DBSCAN instead of kmeans or hierarchical clustering techniques?
+
+   + <font color="red">DBSCAN does not require preknown number of clusters, also allows for a heuristic for relating resolution to density reachable cluster points.</font>
