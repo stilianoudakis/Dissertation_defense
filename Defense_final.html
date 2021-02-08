@@ -104,30 +104,32 @@ background-size: contain
 
 --
 
-- TADs are stable and dynamic structures 
+- &lt;font size="5"&gt;TADs are stable and dynamic structures
 
    + Highly conserved across species and cell lines
+   
    + Associated with gene regulation
 
 --
 
-- Disruption of the boundaries that demarcate TADs has been shown to lead to rare diseases and even cancer
+- &lt;font size="5"&gt;Disruption of the boundaries that demarcate TADs has been shown to lead to rare diseases and even cancer
 
    + A 60kb deletion including a TAD boundary led to overexpression of the LMB1 gene resulting in the rare disorder known as autosomal-dominant adult-onset demyelinating leukodystrophy (ADLD)
 
 --
 
-- Understanding the mechanisms through which TADs are formed remains a top priority in our goal to fully understand the functionality of the human genome
+- &lt;font size="5"&gt;Understanding the mechanisms through which TADs are formed remains a top priority in our goal to fully understand the functionality of the human genome
 
 ---
 
 # Hi-C Sequencing
 
 .pull-left[
+&lt;font size="6"&gt;
 - Hi-C is a technique to capture long-range 3D genomic interactions across the whole genome
-
+  
 - A typical Hi-C experiment produces 20x the number of reads as a standard RNA-seq experiment
-
+  
 - Produces a contact matrix
 ]
 
@@ -141,7 +143,7 @@ background-size: contain
 
 --
 
-- 2 primary areas of research:
+&lt;font size="6"&gt; 2 primary areas of research:
 
 --
 
@@ -185,7 +187,8 @@ background-size: contain
 
 # TAD-callers
 
-- Arrowhead (Rao et al.(‎2014))
+&lt;font size="5"&gt;
+- Arrowhead (Rao et al.(2014))
 
    + How author explained why finding TAD segmentation from the contact map is tricky:
 
@@ -199,6 +202,7 @@ background-size: contain
 
 # Prediction-based methods
 
+&lt;font size="5"&gt;
 Build classifiers on ground truth TAD boundaries to draw associations with genomic elements
 
 1. Mourad et al. (PLOS: Computational Biology; 2016)
@@ -213,6 +217,8 @@ Build classifiers on ground truth TAD boundaries to draw associations with genom
 ---
 
 # Bridging the gap between 3D HiC data and 1D ChIP-seq data for more precise domain boundary prediction
+
+&lt;font size="5"&gt;
 
 --
 
@@ -237,6 +243,8 @@ Unanswered questions:
 ---
 
 # Aim 1: Develop a machine learning framework to establish an optimal TAD boundary region prediction model
+
+&lt;font size="6"&gt;
 
 - We chose the random forest (RF) machine learning algorithm as our binary classification tool
 
@@ -273,10 +281,15 @@ Defining the feature space `\(\textbf{X} = \{ X_1, X_2, \cdots, X_p \}\)`
 # Aim 1: Develop a machine learning framework to establish an optimal TAD boundary region prediction model
 
 .pull-left[
+&lt;font size="5"&gt;
 `\(L = \{ GM12878, K562 \}\)`
+
 `\(R = \{ 5 kb, 10 kb, 25 kb, 50 kb, 100 kb \}\)`
+
 `\(P = \{ Signal, OC, OP, Distance \}\)`
+
 `\(S = \{ None, RUS, ROS, SMOTE \}\)`
+
 `\(C = \{ CHR1,CHR2, \cdots \}\)`
 ]
 
@@ -288,6 +301,7 @@ Defining the feature space `\(\textbf{X} = \{ X_1, X_2, \cdots, X_p \}\)`
 
 # Aim 2: Develop a density-based partitioning technique for precise boundary prediction at base-level resolution
 
+&lt;font size="5"&gt;
 - Introducing *preciseTAD*
 
 - What it does…
@@ -305,6 +319,7 @@ Defining the feature space `\(\textbf{X} = \{ X_1, X_2, \cdots, X_p \}\)`
 # Aim 2: Develop a density-based partitioning technique for precise boundary prediction at base-level resolution
 
 .pull-left[
+&lt;font size="6"&gt;
 How it works...
 ]
 
@@ -314,6 +329,7 @@ How it works...
 
 # Aim 2: Develop a density-based partitioning technique for precise boundary prediction at base-level resolution
 
+&lt;font size="6"&gt;
 - Evaluating precision of boundary prediction
 
    1. Signal profile plots
@@ -361,6 +377,7 @@ How it works...
 # Results: Aim 1
 
 .pull-left[
+&lt;font size="6"&gt;
 Optimal BA is obtained for:
 
    + (log2) distance-type feature space,
@@ -459,6 +476,7 @@ background-size: 87%
 # Results: Aim 2
 
 .pull-left[
+&lt;font size="6"&gt;
 - *preciseTAD* is invariant to low resolution ground truth boundaries
 
 - Implementing *preciseTAD* on low resolution Arrowhead results in similar boundaries across resolution
@@ -492,6 +510,7 @@ background-size: 87%
 
 # Conclusions
 
+&lt;font size="5"&gt;
 --
 
 - TAD-calling &amp; boundary prediction is a multi-faceted problem
@@ -522,6 +541,7 @@ background-size: 87%
 
 # Deliverables
 
+&lt;font size="5"&gt;
 --
 
 - Models trained using Aim 1 are provided in [preciseTADhub](https://bioconductor.org/packages/devel/data/experiment/html/preciseTADhub.html) as an ExperimentHub R package accepted to Bioconductor
@@ -546,6 +566,7 @@ bioRxiv 2020.09.03.282186; doi: https://doi.org/10.1101/2020.09.03.282186
 
 # Future Work
 
+&lt;font size="6"&gt;
 --
 
 - Incorporate directionality of CTCF motifs
